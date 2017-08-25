@@ -25,7 +25,7 @@ public class ActionControl extends TicController implements ActionListener {
             if (e.getSource() == view.B[i]){
 
                 view.B[i].setText(nowPlaying.getSymbol());
-                
+
                 if(nowPlaying==player1)setNowPlaying(player2);
                 else setNowPlaying(player1);
             }
