@@ -30,9 +30,6 @@ public class ActionControl extends TicController implements ActionListener {
         for( i=0;i<3;i++) {
             for (j=0; j < 3; j++) {
                 if (e.getSource() == view.B[i][j]) {
-
-
-                   // view.B[i][j].setText("",createImageIcon(nowPlaying.getSymbol())));
                     try{
                         play = new ImageIcon(getClass().getResource(nowPlaying.getSymbol()));
 
@@ -41,7 +38,7 @@ public class ActionControl extends TicController implements ActionListener {
                     }
 
                     view.B[i][j].setIcon(play);
-
+                    view.B[i][j].setDisabledIcon(play);
                     view.B[i][j].setEnabled(false);
                     setTicValue(i,j);
 
