@@ -2,13 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 /**
  * Created by Namila on 8/25/2017.
  */
 public class GUI extends JFrame {
 
-    public JButton[] B = new JButton[9];
+    public JButton[][] B = new JButton[3][3];
     public ActionControl actionControl;
 
 
@@ -20,13 +21,16 @@ public class GUI extends JFrame {
     }
 
     public void addButtons(){
-          int i=0;
-        for( ;i<9;i++){
-             B[i] = new JButton();
 
-            B[i].addActionListener(actionControl);
-            this.add(B[i]);
+        for(int i=0 ;i<3;i++) {
+            for (int j = 0; j < 3; j++) {
 
+                B[i][j] = new JButton();
+
+                B[i][j].addActionListener(actionControl);
+                this.add(B[i][j]);
+
+            }
         }
 
     }
