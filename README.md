@@ -1,11 +1,12 @@
 # Tic_Tac_Toe [![Build Status](https://travis-ci.org/namila007/Tic_Tac_Toe.svg?branch=master)](https://travis-ci.org/namila007/Tic_Tac_Toe)
-Two Player simple tic tac toe game
+Two Player simple tic tac toe game using MVC architechture 
 
 ## ![screenshot_1](https://user-images.githubusercontent.com/18147085/29840824-ee058a5e-8d20-11e7-8010-845c965910bb.png)
 
 ## Description:
 In this laboratory class, you are expected to implement the classical tick-tact-toe
 game. Specification for is as follows:
+
 • Display a 3x3 matrix of buttons.
 
 • Each player gets a turns to pick a button which is not selected. If the player selects a
