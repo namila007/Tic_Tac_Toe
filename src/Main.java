@@ -7,12 +7,19 @@ public class Main {
 
 
     public static void main(String[] args) {
-        TicController t=new TicController();
-        GUI g=new GUI();
+        TicView ticView =new TicView();
+        TicModel model=new TicModel();
+        TicController controller=new TicController(model, ticView);
 
-        g.addButtons();
-        g.setSize(400,400);
-        g.setVisible(true);
-        g.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ticView.setTitle("Tic Toc Toe");
+        ticView.addButtons(controller);
+        ticView.setSize(300,300);
+        ticView.setLocationRelativeTo(null);
+        ticView.setVisible(true);
+        ticView.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        
+
     }
 }

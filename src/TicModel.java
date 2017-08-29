@@ -32,4 +32,9 @@ public class TicModel {
          return false;
     }
 
+    public void resetMatrix(){
+        this.matrix=new int[3][3];
+
+    }
+
 }
