@@ -3,7 +3,7 @@ import javax.swing.*;
 /**
  * Created by Namila on 8/25/2017.
  */
-public class Main {
+public class TicTacToe {
 
 
     public static void main(String[] args) {
