@@ -95,7 +95,7 @@ public class TicController implements ActionListener {
                     if(ticView.B[i][j].getIcon()==null) {
                         ticView.B[i][j].setIcon(play);
                         ticView.B[i][j].setDisabledIcon(play);
-                       // ticView.B[i][j].setEnabled(false);
+
                         setTicValue(i, j);
                     }
                     if (nowPlaying == player1) setNowPlaying(player2);
@@ -112,7 +112,8 @@ public class TicController implements ActionListener {
         playingCount=0;
         ticView.setVisible(false);
         ticView.dispose();
-        Main.main(null);
+
+        TicTacToe.main(null);
     }
 
 
