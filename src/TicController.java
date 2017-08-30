@@ -26,7 +26,7 @@ public class TicController implements ActionListener {
         this.model=model;
         this.ticView = ticView;
         nowPlaying=player1;
-
+        ticView.addButtons(this);
 
 
     }
@@ -99,7 +99,7 @@ public class TicController implements ActionListener {
                         setTicValue(i, j);
                         if (nowPlaying == player1) setNowPlaying(player2);
                     	else setNowPlaying(player1);
-                    }else System.out.println("set"+nowPlaying.getId());
+                    }
                     
                 }
             }
