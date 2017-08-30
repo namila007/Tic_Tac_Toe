@@ -20,8 +20,8 @@ public class TicController implements ActionListener {
 
     public TicController(TicModel model, TicView ticView){
 
-        player1=new Player("\\image\\x.png",1);
-        player2=new Player("\\image\\o.png",2);
+        player1=new Player("/image/x.png",1);
+        player2=new Player("/image/o.png",2);
 
         this.model=model;
         this.ticView = ticView;
@@ -38,7 +38,7 @@ public class TicController implements ActionListener {
            System.out.println("Player 1 Won");
           // JOptionPane.showMessageDialog(null, "Player 1 Won", "InfoBox: " + "Won", JOptionPane.INFORMATION_MESSAGE);
 
-           optionPaneValue= JOptionPane.showOptionDialog(null,"Player 1 Won.\n Restart the game?","Player 1 Won",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null, null, null);
+           optionPaneValue= JOptionPane.showOptionDialog(null,"Player 1 Won.\n Restart the game?","Player 1 Won",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null, null, null);
             if(optionPaneValue==JOptionPane.YES_OPTION) {
                 reset();
 
@@ -50,7 +50,7 @@ public class TicController implements ActionListener {
        }
         else if(model.findWinner(2)) {
            System.out.println("Player 2 Won");// System.exit(1);
-           optionPaneValue= JOptionPane.showOptionDialog(null,"Player 2 Won the game.\n Restart the game?","Player 2 Won",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null, null, null);
+           optionPaneValue= JOptionPane.showOptionDialog(null,"Player 2 Won the game.\n Restart the game?","Player 2 Won",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null, null, null);
            if(optionPaneValue==JOptionPane.YES_OPTION) {
                reset();
 
@@ -61,8 +61,8 @@ public class TicController implements ActionListener {
            }
        }
         else if(playingCount==9 ) {
-           System.out.println("DROW");
-           optionPaneValue= JOptionPane.showOptionDialog(null,"Drow.\n Restart the game?","Drow Game",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE,null, null, null);
+           System.out.println("DRAW");
+           optionPaneValue= JOptionPane.showOptionDialog(null,"Draw.\n Restart the game?","Draw Game",JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE,null, null, null);
            if(optionPaneValue==JOptionPane.YES_OPTION) {
                reset();
 
@@ -97,9 +97,10 @@ public class TicController implements ActionListener {
                         ticView.B[i][j].setDisabledIcon(play);
 
                         setTicValue(i, j);
-                    }
-                    if (nowPlaying == player1) setNowPlaying(player2);
-                    else setNowPlaying(player1);
+                        if (nowPlaying == player1) setNowPlaying(player2);
+                    	else setNowPlaying(player1);
+                    }else System.out.println("set"+nowPlaying.getId());
+                    
                 }
             }
 
